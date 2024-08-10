@@ -41,8 +41,8 @@ SRTF is a preemptive version of SJF. It schedules processes based on the remaini
 To run these algorithms locally, clone the repository and compile the C files using a C compiler.
 
 ```bash
-git clone https://github.com/yourusername/cpu-scheduling-algorithms.git
-cd cpu-scheduling-algorithms
+https://github.com/Rikhil777/Scheduling_Algorithms.git
+cd Scheduling_Algorithms
 ```
 
 Compile the programs using a C compiler, such as `gcc`:
