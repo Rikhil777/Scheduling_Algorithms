@@ -22,28 +22,6 @@ int main()
         scanf("%d",&bt[i]);
     }
 
-    int ct[n];
-    //completion time
-    ct[0] = at[0] + bt[0]; //first process
-    for (int i = 1;i<n;i++) 
-    {
-        if (at[i] > ct[i-1]){
-            ct[i] = at[i] + bt[i];
-        }
-        else {
-            ct[i] = ct[i - 1] + bt[i];
-        }
-    }
-    int tat[n];
-    for (int i = 0;i<n;i++) 
-    {
-        tat[i] = ct[i] - at[i];
-    }
-    int wt[n];
-    for (int i = 0;i < n;i++)
-    {
-        wt[i] = tat[i] - bt[i];
-    }
     // Sorting Arrival Time
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -65,6 +43,29 @@ int main()
                 
             }
         }
+    }
+    
+    int ct[n];
+    //completion time
+    ct[0] = at[0] + bt[0]; //first process
+    for (int i = 1;i<n;i++) 
+    {
+        if (at[i] > ct[i-1]){
+            ct[i] = at[i] + bt[i];
+        }
+        else {
+            ct[i] = ct[i - 1] + bt[i];
+        }
+    }
+    int tat[n];
+    for (int i = 0;i<n;i++) 
+    {
+        tat[i] = ct[i] - at[i];
+    }
+    int wt[n];
+    for (int i = 0;i < n;i++)
+    {
+        wt[i] = tat[i] - bt[i];
     }
     
 printf("\n=====================================  The Process Table  ==============================================\n");
